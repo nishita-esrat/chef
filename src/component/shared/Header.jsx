@@ -4,14 +4,14 @@ import { FaUserCircle } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <div className="bg-black">
+    <div className="bg-black fixed w-full bg-opacity-80">
       <div className="container navbar">
         <div className="navbar-start">
           <div className="dropdown">
             <div
               tabIndex={0}
               role="button"
-              className="text-yellow-700 mr-2 lg:hidden"
+              className="text-white mr-2 lg:hidden"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -30,13 +30,15 @@ const Header = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu-sm dropdown-content mt-7 z-[1] p-2 shadow-lg bg-black rounded-md w-52 text-yellow-800 font-medium"
+              className="menu-sm dropdown-content mt-7 z-[1] p-2 shadow-lg bg-white rounded-md w-52 text-black font-medium"
             >
               <li className="mb-3">
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
-                    isActive ? "border-b-2 border-yellow-700" : ""
+                    isActive
+                      ? "border-b-2 border-yellow-700 text-yellow-700"
+                      : ""
                   }
                 >
                   Home
@@ -46,7 +48,9 @@ const Header = () => {
                 <NavLink
                   to="/blog"
                   className={({ isActive }) =>
-                    isActive ? "border-b-2 border-yellow-700" : ""
+                    isActive
+                      ? "border-b-2 border-yellow-700 text-yellow-700"
+                      : ""
                   }
                 >
                   Blog
@@ -56,7 +60,9 @@ const Header = () => {
                 <NavLink
                   to="/my_item"
                   className={({ isActive }) =>
-                    isActive ? "border-b-2 border-yellow-700" : ""
+                    isActive
+                      ? "border-b-2 border-yellow-700 text-yellow-700"
+                      : ""
                   }
                 >
                   my favourite item
@@ -66,18 +72,20 @@ const Header = () => {
           </div>
           <Link
             to="/"
-            className="text-yellow-800 font-bold md:text-3xl text-xl italic"
+            className="text-white font-bold md:text-3xl text-xl italic"
           >
             food lover
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu-horizontal px-1 gap-4 text-yellow-800 font-medium">
+          <ul className="menu-horizontal px-1 gap-4 text-white font-medium">
             <li>
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  isActive ? "border-b-2 pb-2 border-yellow-700" : ""
+                  isActive
+                    ? "border-b-2 pb-2 border-yellow-700 text-yellow-700"
+                    : ""
                 }
               >
                 Home
@@ -87,7 +95,9 @@ const Header = () => {
               <NavLink
                 to="/blog"
                 className={({ isActive }) =>
-                  isActive ? "border-b-2 pb-2 border-yellow-700" : ""
+                  isActive
+                    ? "border-b-2 pb-2 border-yellow-700 text-yellow-700"
+                    : ""
                 }
               >
                 Blog
@@ -97,7 +107,9 @@ const Header = () => {
               <NavLink
                 to="/my_item"
                 className={({ isActive }) =>
-                  isActive ? "border-b-2 pb-2 border-yellow-700" : ""
+                  isActive
+                    ? "border-b-2 pb-2 border-yellow-700 text-yellow-700"
+                    : ""
                 }
               >
                 my favourite item
@@ -116,7 +128,10 @@ const Header = () => {
                 title="name"
                 src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
               /> */}
-              <FaUserCircle className="text-yellow-700 Navbar component text-4xl" title="name"/>
+              <FaUserCircle
+                className="text-white Navbar component text-4xl"
+                title="name"
+              />
             </div>
           </div>
           <ul
