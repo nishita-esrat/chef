@@ -11,7 +11,8 @@ import Blog from "../pages/blog/Blog";
       children:[
         {
           path:'/',
-          element:<Home/>
+          element:<Home/>,
+          loader:()=> fetch("http://localhost:800/all_chef")
         },
         {
           path:'blog',
@@ -19,6 +20,11 @@ import Blog from "../pages/blog/Blog";
         },
         {
           path:'my_item',
+          element:'heloooo'
+        }
+        ,
+        {
+          path:'single_chef/:chefId',
           element:'heloooo'
         }
       ]

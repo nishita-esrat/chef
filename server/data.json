@@ -1,0 +1,339 @@
+
+[
+    {
+      "chefId": 1,
+      "chefName": "Julia Child",
+      "chefPhotoId": "https://img.freepik.com/free-photo/pleased-young-male-cook-wearing-chef-uniform-glasses-crossing-hands-standing-white-wall-isolated-yellow-wall-with-copy-space_141793-78448.jpg?w=900&t=st=1702317828~exp=1702318428~hmac=7776759452b7cd1c5bc43a928dca8cb0dc0dbabc7f05cedfe42d48ec4e99502e",
+      "likes": 15000,
+      "bio": "Renowned American chef, author, and television personality. Julia Child revolutionized American cuisine with her cooking shows and books.",
+      "yearsOfExperience": 30,
+      "numOfRecipes": 500,
+      "recipes": [
+        {
+          "recipeId": "1chef-1",
+          "recipeName": "Spaghetti Bolognese",
+          "recipePic": "https://img.freepik.com/premium-photo/fettuccine-pasta-with-shrimp-tomatoes-herbs_2829-15972.jpg?w=900",
+          "ingredients": [
+            "500g ground beef",
+            "1 onion, diced",
+            "2 cloves garlic, minced",
+            "1 can (400g) crushed tomatoes",
+            "2 tablespoons tomato paste",
+            "Salt and pepper to taste"
+          ],
+          "cookingMethod": "1. In a large pan, brown the ground beef over medium heat.\n2. Add diced onions and minced garlic, cook until onions are soft.\n3. Stir in crushed tomatoes and tomato paste. Season with salt and pepper.\n4. Simmer for 20-30 minutes, stirring occasionally.\n5. Serve over cooked spaghetti.",
+          "rating": 4.7
+        },
+        {
+          "recipeId": "1chef-2",
+          "recipeName": "Chicken Caesar Salad",
+          "recipePic": "https://img.freepik.com/free-photo/baked-chicken-wings-asian-style-tomatoes-sauce-plate_2829-10657.jpg?w=996&t=st=1702317232~exp=1702317832~hmac=2ef48b31e240544fff45eafd43e9b6436854c0d7b0d2a29711ae8e99ba6639fe",
+          "ingredients": [
+            "2 boneless, skinless chicken breasts",
+            "Romaine lettuce, chopped",
+            "1 cup cherry tomatoes, halved",
+            "1/2 cup croutons",
+            "1/4 cup grated Parmesan cheese",
+            "Caesar dressing"
+          ],
+          "cookingMethod": "1. Season chicken breasts with salt and pepper.\n2. Grill or pan-fry chicken until fully cooked.\n3. Slice cooked chicken into strips.\n4. In a large bowl, combine chopped lettuce, cherry tomatoes, croutons, and Parmesan cheese.\n5. Add sliced chicken on top and drizzle with Caesar dressing.",
+          "rating": 4.5
+        },
+        {
+          "recipeId": "1chef-3",
+          "recipeName": "Vegetarian Stir-Fry",
+          "recipePic": "https://img.freepik.com/free-photo/baked-chicken-wings-asian-style-tomatoes-sauce-plate_2829-10657.jpg?w=996&t=st=1702317232~exp=1702317832~hmac=2ef48b31e240544fff45eafd43e9b6436854c0d7b0d2a29711ae8e99ba6639fe",
+          "ingredients": [
+            "2 cups broccoli florets",
+            "1 bell pepper, sliced",
+            "1 carrot, julienned",
+            "1 cup snap peas",
+            "1 block firm tofu, cubed",
+            "3 tablespoons soy sauce"
+          ],
+          "cookingMethod": "1. Heat oil in a wok or large pan over high heat.\n2. Stir-fry tofu until golden brown. Remove from the pan.\n3. Stir-fry broccoli, bell pepper, carrot, and snap peas until vegetables are tender-crisp.\n4. Add tofu back to the pan. Pour soy sauce over the mixture.\n5. Toss everything together and serve over rice.",
+          "rating": 4.2
+        }
+      ]
+    },
+    {
+      "chefId": 2,
+      "chefName": "Gordon Ramsay",
+      "chefPhotoId": "https://img.freepik.com/free-photo/happy-young-cook-uniform-holding-salad_171337-5342.jpg?w=996&t=st=1702317796~exp=1702318396~hmac=ade25c565cf597a884c3498240cb687e8e96c3e9f5f05464b32306200946256b",
+      "likes": 25000,
+      "bio": "Renowned American chef, restaurateur, and television personality. Known for his fiery personality and Michelin-starred restaurants.",
+      "yearsOfExperience": 25,
+      "numOfRecipes": 300,
+      "recipes": [
+        {
+          "recipeId": "2chef-1",
+          "recipeName": "Spaghetti Bolognese",
+          "recipePic": "https://img.freepik.com/free-photo/baked-chicken-wings-asian-style-tomatoes-sauce-plate_2829-10657.jpg?w=996&t=st=1702317232~exp=1702317832~hmac=2ef48b31e240544fff45eafd43e9b6436854c0d7b0d2a29711ae8e99ba6639fe",
+          "ingredients": [
+            "500g ground beef",
+            "1 onion, diced",
+            "2 cloves garlic, minced",
+            "1 can (400g) crushed tomatoes",
+            "2 tablespoons tomato paste",
+            "Salt and pepper to taste"
+          ],
+          "cookingMethod": "1. In a large pan, brown the ground beef over medium heat.\n2. Add diced onions and minced garlic, cook until onions are soft.\n3. Stir in crushed tomatoes and tomato paste. Season with salt and pepper.\n4. Simmer for 20-30 minutes, stirring occasionally.\n5. Serve over cooked spaghetti.",
+          "rating": 4.7
+        },
+        {
+          "recipeId": "2chef-2",
+          "recipePic": "https://img.freepik.com/free-photo/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table_2829-19739.jpg?w=900&t=st=1702317102~exp=1702317702~hmac=ba38fca022f0f07c8817c0f78794402aa7b49bdb8cd2243d121b7c22c9f69bd7",
+          "recipeName": "Chicken Caesar Salad",
+          "ingredients": [
+            "2 boneless, skinless chicken breasts",
+            "Romaine lettuce, chopped",
+            "1 cup cherry tomatoes, halved",
+            "1/2 cup croutons",
+            "1/4 cup grated Parmesan cheese",
+            "Caesar dressing"
+          ],
+          "cookingMethod": "1. Season chicken breasts with salt and pepper.\n2. Grill or pan-fry chicken until fully cooked.\n3. Slice cooked chicken into strips.\n4. In a large bowl, combine chopped lettuce, cherry tomatoes, croutons, and Parmesan cheese.\n5. Add sliced chicken on top and drizzle with Caesar dressing.",
+          "rating": 4.5
+        },
+        {
+          "recipeId": "2chef-3",
+          "recipePic": "https://img.freepik.com/free-photo/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table_2829-19739.jpg?w=900&t=st=1702317102~exp=1702317702~hmac=ba38fca022f0f07c8817c0f78794402aa7b49bdb8cd2243d121b7c22c9f69bd7",
+          "recipeName": "Vegetarian Stir-Fry",
+          "ingredients": [
+            "2 cups broccoli florets",
+            "1 bell pepper, sliced",
+            "1 carrot, julienned",
+            "1 cup snap peas",
+            "1 block firm tofu, cubed",
+            "3 tablespoons soy sauce"
+          ],
+          "cookingMethod": "1. Heat oil in a wok or large pan over high heat.\n2. Stir-fry tofu until golden brown. Remove from the pan.\n3. Stir-fry broccoli, bell pepper, carrot, and snap peas until vegetables are tender-crisp.\n4. Add tofu back to the pan. Pour soy sauce over the mixture.\n5. Toss everything together and serve over rice.",
+          "rating": 4.2
+        }
+      ]
+    },
+    {
+      "chefId": 3,
+      "chefName": "Alice Waters",
+      "chefPhotoId": "https://img.freepik.com/free-photo/pleased-young-male-cook-wearing-chef-uniform-glasses-crossing-hands-standing-white-wall-isolated-yellow-wall-with-copy-space_141793-78448.jpg?w=900&t=st=1702317828~exp=1702318428~hmac=7776759452b7cd1c5bc43a928dca8cb0dc0dbabc7f05cedfe42d48ec4e99502e",
+      "likes": 12000,
+      "bio": "American chef, author, and the owner of Chez Panisse, a Berkeley, California restaurant famous for its organic, locally grown ingredients.",
+      "yearsOfExperience": 40,
+      "numOfRecipes": 250,
+      "recipes": [
+        {
+          "recipeId": "3chef-1",
+          "recipeName": "Spaghetti Bolognese",
+          "recipePic": "https://img.freepik.com/free-photo/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table_2829-19739.jpg?w=900&t=st=1702317102~exp=1702317702~hmac=ba38fca022f0f07c8817c0f78794402aa7b49bdb8cd2243d121b7c22c9f69bd7",
+          "ingredients": [
+            "500g ground beef",
+            "1 onion, diced",
+            "2 cloves garlic, minced",
+            "1 can (400g) crushed tomatoes",
+            "2 tablespoons tomato paste",
+            "Salt and pepper to taste"
+          ],
+          "cookingMethod": "1. In a large pan, brown the ground beef over medium heat.\n2. Add diced onions and minced garlic, cook until onions are soft.\n3. Stir in crushed tomatoes and tomato paste. Season with salt and pepper.\n4. Simmer for 20-30 minutes, stirring occasionally.\n5. Serve over cooked spaghetti.",
+          "rating": 4.7
+        },
+        {
+          "recipeId": "3chef-2",
+          "recipeName": "Chicken Caesar Salad",
+          "recipePic": "https://img.freepik.com/free-photo/delicious-fried-chicken-plate_144627-27383.jpg?w=996&t=st=1702316909~exp=1702317509~hmac=d684efa08228c57b0ae61d5b3db45e7271811181ea97d66fc4e5368f84f76896",
+          "ingredients": [
+            "2 boneless, skinless chicken breasts",
+            "Romaine lettuce, chopped",
+            "1 cup cherry tomatoes, halved",
+            "1/2 cup croutons",
+            "1/4 cup grated Parmesan cheese",
+            "Caesar dressing"
+          ],
+          "cookingMethod": "1. Season chicken breasts with salt and pepper.\n2. Grill or pan-fry chicken until fully cooked.\n3. Slice cooked chicken into strips.\n4. In a large bowl, combine chopped lettuce, cherry tomatoes, croutons, and Parmesan cheese.\n5. Add sliced chicken on top and drizzle with Caesar dressing.",
+          "rating": 4.5
+        },
+        {
+          "recipeId": "3chef-3",
+          "recipeName": "Vegetarian Stir-Fry",
+          "recipePic": "https://img.freepik.com/free-photo/delicious-fried-chicken-plate_144627-27383.jpg?w=996&t=st=1702316909~exp=1702317509~hmac=d684efa08228c57b0ae61d5b3db45e7271811181ea97d66fc4e5368f84f76896",
+          "ingredients": [
+            "2 cups broccoli florets",
+            "1 bell pepper, sliced",
+            "1 carrot, julienned",
+            "1 cup snap peas",
+            "1 block firm tofu, cubed",
+            "3 tablespoons soy sauce"
+          ],
+          "cookingMethod": "1. Heat oil in a wok or large pan over high heat.\n2. Stir-fry tofu until golden brown. Remove from the pan.\n3. Stir-fry broccoli, bell pepper, carrot, and snap peas until vegetables are tender-crisp.\n4. Add tofu back to the pan. Pour soy sauce over the mixture.\n5. Toss everything together and serve over rice.",
+          "rating": 4.2
+        }
+      ]
+    },
+    {
+      "chefId": 4,
+      "chefName": "Massimo Bottura",
+      "chefPhotoId": "https://img.freepik.com/free-photo/pleased-young-female-cook-wearing-chef-uniform-holding-spoon-crossing-hands-isolated-white-wall_141793-119455.jpg?w=900&t=st=1702317672~exp=1702318272~hmac=60015da313f16196539fa611e662c7eb0939ffc86a964ed97397cf266c0e2695",
+      "likes": 18000,
+      "bio": "Renowned American chef and owner of Osteria Francescana, a three-Michelin-star restaurant in Modena, Italy. Renowned for his modern approach to Italian cuisine.",
+      "yearsOfExperience": 30,
+      "numOfRecipes": 200,
+      "recipes": [
+        {
+          "recipeId": "4chef-1",
+          "recipeName": "Chicken Caesar Salad",
+          "recipePic": "https://img.freepik.com/free-photo/delicious-fried-chicken-plate_144627-27383.jpg?w=996&t=st=1702316909~exp=1702317509~hmac=d684efa08228c57b0ae61d5b3db45e7271811181ea97d66fc4e5368f84f76896",
+          "ingredients": [
+            "500g ground beef",
+            "1 onion, diced",
+            "2 cloves garlic, minced",
+            "1 can (400g) crushed tomatoes",
+            "2 tablespoons tomato paste",
+            "Salt and pepper to taste"
+          ],
+          "cookingMethod": "1. In a large pan, brown the ground beef over medium heat.\n2. Add diced onions and minced garlic, cook until onions are soft.\n3. Stir in crushed tomatoes and tomato paste. Season with salt and pepper.\n4. Simmer for 20-30 minutes, stirring occasionally.\n5. Serve over cooked spaghetti.",
+          "rating": 4.7
+        },
+        {
+          "recipeId": "4chef-2",
+          "recipeName": "Chicken Caesar Salad",
+          "recipePic": "https://img.freepik.com/free-photo/christmas-sweets-platter_114579-20426.jpg?w=996&t=st=1702316660~exp=1702317260~hmac=f886aceb7e3cd8f26df96ad2937d1fd275854a317178f8f8e15f9ffe64359f06",
+          "ingredients": [
+            "2 boneless, skinless chicken breasts",
+            "Romaine lettuce, chopped",
+            "1 cup cherry tomatoes, halved",
+            "1/2 cup croutons",
+            "1/4 cup grated Parmesan cheese",
+            "Caesar dressing"
+          ],
+          "cookingMethod": "1. Season chicken breasts with salt and pepper.\n2. Grill or pan-fry chicken until fully cooked.\n3. Slice cooked chicken into strips.\n4. In a large bowl, combine chopped lettuce, cherry tomatoes, croutons, and Parmesan cheese.\n5. Add sliced chicken on top and drizzle with Caesar dressing.",
+          "rating": 4.5
+        },
+        {
+          "recipeId": "4chef-3",
+          "recipeName": "Vegetarian Stir-Fry",
+          "recipePic": "https://img.freepik.com/free-photo/christmas-sweets-platter_114579-20426.jpg?w=996&t=st=1702316660~exp=1702317260~hmac=f886aceb7e3cd8f26df96ad2937d1fd275854a317178f8f8e15f9ffe64359f06",
+          "ingredients": [
+            "2 cups broccoli florets",
+            "1 bell pepper, sliced",
+            "1 carrot, julienned",
+            "1 cup snap peas",
+            "1 block firm tofu, cubed",
+            "3 tablespoons soy sauce"
+          ],
+          "cookingMethod": "1. Heat oil in a wok or large pan over high heat.\n2. Stir-fry tofu until golden brown. Remove from the pan.\n3. Stir-fry broccoli, bell pepper, carrot, and snap peas until vegetables are tender-crisp.\n4. Add tofu back to the pan. Pour soy sauce over the mixture.\n5. Toss everything together and serve over rice.",
+          "rating": 4.2
+        }
+      ]
+    },
+    {
+      "chefId": 5,
+      "chefName": "Nigella Lawson",
+      "chefPhotoId": "https://img.freepik.com/free-photo/happy-young-cook-uniform-holding-salad_171337-5342.jpg?w=996&t=st=1702317796~exp=1702318396~hmac=ade25c565cf597a884c3498240cb687e8e96c3e9f5f05464b32306200946256b",
+      "likes": 20000,
+      "bio": "Renowned American chef, television cook, and journalist. Known for her engaging cooking shows and best-selling cookbooks.",
+      "yearsOfExperience": 25,
+      "numOfRecipes": 150,
+      "recipes": [
+        {
+          "recipeId": "5chef-1",
+          "recipeName": "Spaghetti Bolognese",
+          "recipePic": "https://img.freepik.com/free-photo/christmas-sweets-platter_114579-20426.jpg?w=996&t=st=1702316660~exp=1702317260~hmac=f886aceb7e3cd8f26df96ad2937d1fd275854a317178f8f8e15f9ffe64359f06",
+          "ingredients": [
+            "500g ground beef",
+            "1 onion, diced",
+            "2 cloves garlic, minced",
+            "1 can (400g) crushed tomatoes",
+            "2 tablespoons tomato paste",
+            "Salt and pepper to taste"
+          ],
+          "cookingMethod": "1. In a large pan, brown the ground beef over medium heat.\n2. Add diced onions and minced garlic, cook until onions are soft.\n3. Stir in crushed tomatoes and tomato paste. Season with salt and pepper.\n4. Simmer for 20-30 minutes, stirring occasionally.\n5. Serve over cooked spaghetti.",
+          "rating": 4.7
+        },
+        {
+          "recipeId": "5chef-2",
+          "recipeName": "Chicken Caesar Salad",
+          "recipePic": "https://img.freepik.com/free-photo/front-view-pancakes-with-red-black-currants-strawberries-black-plate-beige-napkin_141793-17749.jpg?w=996&t=st=1702316481~exp=1702317081~hmac=5ea24ff7af27cc231cdd1651bde14eea495d9fccee2f6959155e01632d63d4ea",
+          "ingredients": [
+            "2 boneless, skinless chicken breasts",
+            "Romaine lettuce, chopped",
+            "1 cup cherry tomatoes, halved",
+            "1/2 cup croutons",
+            "1/4 cup grated Parmesan cheese",
+            "Caesar dressing"
+          ],
+          "cookingMethod": "1. Season chicken breasts with salt and pepper.\n2. Grill or pan-fry chicken until fully cooked.\n3. Slice cooked chicken into strips.\n4. In a large bowl, combine chopped lettuce, cherry tomatoes, croutons, and Parmesan cheese.\n5. Add sliced chicken on top and drizzle with Caesar dressing.",
+          "rating": 4.5
+        },
+        {
+          "recipeId": "5chef-3",
+          "recipeName": "Vegetarian Stir-Fry",
+          "recipePic": "https://img.freepik.com/free-photo/front-view-pancakes-with-red-black-currants-strawberries-black-plate-beige-napkin_141793-17749.jpg?w=996&t=st=1702316481~exp=1702317081~hmac=5ea24ff7af27cc231cdd1651bde14eea495d9fccee2f6959155e01632d63d4ea",
+          "ingredients": [
+            "2 cups broccoli florets",
+            "1 bell pepper, sliced",
+            "1 carrot, julienned",
+            "1 cup snap peas",
+            "1 block firm tofu, cubed",
+            "3 tablespoons soy sauce"
+          ],
+          "cookingMethod": "1. Heat oil in a wok or large pan over high heat.\n2. Stir-fry tofu until golden brown. Remove from the pan.\n3. Stir-fry broccoli, bell pepper, carrot, and snap peas until vegetables are tender-crisp.\n4. Add tofu back to the pan. Pour soy sauce over the mixture.\n5. Toss everything together and serve over rice.",
+          "rating": 4.2
+        }
+      ]
+    },
+    {
+      "chefId": 6,
+      "chefName": "Ming Tsai",
+      "chefPhotoId": "https://img.freepik.com/premium-photo/smiling-male-chef-with-cooked-food-kitchen_1134-1651.jpg?w=996",
+      "likes": 15000,
+      "bio": "American restaurateur, television personality, and chef. Ming Tsai is known for his fusion of Asian and Western cuisines.",
+      "yearsOfExperience": 20,
+      "numOfRecipes": 200,
+      "recipes": [
+        {
+          "recipeId": "6chef-1",
+          "recipeName": "Spaghetti Bolognese",
+          "recipePic": "https://img.freepik.com/free-photo/front-view-pancakes-with-red-black-currants-strawberries-black-plate-beige-napkin_141793-17749.jpg?w=996&t=st=1702316481~exp=1702317081~hmac=5ea24ff7af27cc231cdd1651bde14eea495d9fccee2f6959155e01632d63d4ea",
+          "ingredients": [
+            "500g ground beef",
+            "1 onion, diced",
+            "2 cloves garlic, minced",
+            "1 can (400g) crushed tomatoes",
+            "2 tablespoons tomato paste",
+            "Salt and pepper to taste"
+          ],
+          "cookingMethod": "1. In a large pan, brown the ground beef over medium heat.\n2. Add diced onions and minced garlic, cook until onions are soft.\n3. Stir in crushed tomatoes and tomato paste. Season with salt and pepper.\n4. Simmer for 20-30 minutes, stirring occasionally.\n5. Serve over cooked spaghetti.",
+          "rating": 4.7
+        },
+        {
+          "recipeId": "6chef-2",
+          "recipeName": "Chicken Caesar Salad",
+          "recipePic": "https://img.freepik.com/free-photo/front-view-pancakes-with-red-black-currants-strawberries-black-plate-beige-napkin_141793-17749.jpg?w=996&t=st=1702316481~exp=1702317081~hmac=5ea24ff7af27cc231cdd1651bde14eea495d9fccee2f6959155e01632d63d4ea",
+          "ingredients": [
+            "2 boneless, skinless chicken breasts",
+            "Romaine lettuce, chopped",
+            "1 cup cherry tomatoes, halved",
+            "1/2 cup croutons",
+            "1/4 cup grated Parmesan cheese",
+            "Caesar dressing"
+          ],
+          "cookingMethod": "1. Season chicken breasts with salt and pepper.\n2. Grill or pan-fry chicken until fully cooked.\n3. Slice cooked chicken into strips.\n4. In a large bowl, combine chopped lettuce, cherry tomatoes, croutons, and Parmesan cheese.\n5. Add sliced chicken on top and drizzle with Caesar dressing.",
+          "rating": 4.5
+        },
+        {
+          "recipeId": "6chef-3",
+          "recipeName": "Vegetarian Stir-Fry",
+          "recipePic": "https://img.freepik.com/free-photo/christmas-sweets-platter_114579-20426.jpg?w=996&t=st=1702316660~exp=1702317260~hmac=f886aceb7e3cd8f26df96ad2937d1fd275854a317178f8f8e15f9ffe64359f06",
+          "ingredients": [
+            "2 cups broccoli florets",
+            "1 bell pepper, sliced",
+            "1 carrot, julienned",
+            "1 cup snap peas",
+            "1 block firm tofu, cubed",
+            "3 tablespoons soy sauce"
+          ],
+          "cookingMethod": "1. Heat oil in a wok or large pan over high heat.\n2. Stir-fry tofu until golden brown. Remove from the pan.\n3. Stir-fry broccoli, bell pepper, carrot, and snap peas until vegetables are tender-crisp.\n4. Add tofu back to the pan. Pour soy sauce over the mixture.\n5. Toss everything together and serve over rice.",
+          "rating": 4.2
+        }
+      ]
+    }
+  ]

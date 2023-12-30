@@ -9,7 +9,7 @@ const Hero = () => {
       }}
       className="h-screen  bg-no-repeat bg-cover bg-center bg-fixed"
     >
-      <div className="container flex justify-center pt-32 md:pt-28 xl:pt-44">
+      <div className="container flex justify-center pt-32 md:pt-24 xl:pt-44">
         <div className="bg-black bg-opacity-70 p-12 md:p-16 xl:p-24 text-white flex flex-col items-center gap-10 rounded-md">
           <h2 className="italic font-semibold text-2xl">
             food lover<span>...</span>

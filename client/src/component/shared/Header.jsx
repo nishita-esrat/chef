@@ -4,7 +4,7 @@ import { FaUserCircle } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <div className="bg-black fixed w-full bg-opacity-80">
+    <div className="bg-black fixed w-full bg-opacity-80 z-50">
       <div className="container navbar">
         <div className="navbar-start">
           <div className="dropdown">
