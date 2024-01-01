@@ -3,6 +3,7 @@ const cors = require("cors");
 let app = express();
 const data = require("./data.json");
 
+
 app.use(cors());
 // for checking sever is running or not
 app.get("/health", (_req, res) => {
@@ -15,7 +16,7 @@ app.get("/all_chef", (_req, res) => {
 // for getting single chef data depend on chef id
 app.get("/all_chef/:chefId", (req, res) => {
   const chefId = parseInt(req.params.chefId)
-  const result = data.filter((item) => item.chefId == chefId);
+  const result = data.find((item) => item.chefId == chefId);
   res.send(result);
 });
 

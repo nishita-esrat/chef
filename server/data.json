@@ -1,4 +1,5 @@
 
+
 [
     {
       "chefId": 1,
@@ -115,7 +116,7 @@
     {
       "chefId": 3,
       "chefName": "Alice Waters",
-      "chefPhotoId": "https://img.freepik.com/free-photo/pleased-young-male-cook-wearing-chef-uniform-glasses-crossing-hands-standing-white-wall-isolated-yellow-wall-with-copy-space_141793-78448.jpg?w=900&t=st=1702317828~exp=1702318428~hmac=7776759452b7cd1c5bc43a928dca8cb0dc0dbabc7f05cedfe42d48ec4e99502e",
+      "chefPhotoId":"https://img.freepik.com/free-photo/chef-cutting-green-cucumber-his-kitchen_155003-496.jpg?w=996&t=st=1704090691~exp=1704091291~hmac=1db033b468cfea82e75e390be53547f7e81c6c89fbf5bceaf8d9b2ccb516fa1a" ,
       "likes": 12000,
       "bio": "American chef, author, and the owner of Chez Panisse, a Berkeley, California restaurant famous for its organic, locally grown ingredients.",
       "yearsOfExperience": 40,
@@ -227,7 +228,7 @@
     {
       "chefId": 5,
       "chefName": "Nigella Lawson",
-      "chefPhotoId": "https://img.freepik.com/free-photo/happy-young-cook-uniform-holding-salad_171337-5342.jpg?w=996&t=st=1702317796~exp=1702318396~hmac=ade25c565cf597a884c3498240cb687e8e96c3e9f5f05464b32306200946256b",
+      "chefPhotoId": "https://img.freepik.com/premium-photo/male-kitchen-chef-with-white-red-hat-white-dress-code_862994-6817.jpg?w=740",
       "likes": 20000,
       "bio": "Renowned American chef, television cook, and journalist. Known for her engaging cooking shows and best-selling cookbooks.",
       "yearsOfExperience": 25,
