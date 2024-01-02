@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaRegHeart } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
+import {
+  getLocalStorgeRecipe,
+  setLocalStorgeRecipe,
+} from "../../utility/utilities";
+import { toast } from "react-toastify";
 
 const ChefTable = ({ recipe }) => {
-  const [isFav, setIsFav] = useState(false);
+  const [isFav, setIsFav] = useState({});
+  const [check, setCheck] = useState("");
   const {
     recipeId,
     recipeName,
@@ -12,6 +18,21 @@ const ChefTable = ({ recipe }) => {
     ingredients,
     rating,
   } = recipe;
+  // set chef item local storage
+  const selectRecipe = (id) => {
+    const result = setLocalStorgeRecipe(id);
+    if (result == "item added") {
+      toast.success(result, { icon: <FaHeart /> });
+    } else {
+      toast.info(result, { icon: <FaHeart /> });
+    }
+    setCheck(result);
+  };
+  // get chef items from local storage
+  useEffect(() => {
+    const result = getLocalStorgeRecipe();
+    setIsFav(result);
+  }, [check]);
   return (
     <>
       <tr>
@@ -31,7 +52,9 @@ const ChefTable = ({ recipe }) => {
           {ingredients &&
             ingredients.map((item, index) => {
               return (
-                <span className="badge badge-ghost badge-sm">{item},</span>
+                <span className="badge badge-ghost badge-sm" key={index}>
+                  {item},
+                </span>
               );
             })}
         </td>
@@ -43,10 +66,16 @@ const ChefTable = ({ recipe }) => {
         </th>
         <th>
           <button className="btn btn-ghost btn-xs text-yellow-700 ">
-            {isFav ? (
-              <FaHeart className="w-5 h-5" />
+            {isFav[recipeId] ? (
+              <FaHeart
+                className="w-5 h-5"
+                onClick={() => selectRecipe(recipeId)}
+              />
             ) : (
-              <FaRegHeart className="w-5 h-5" />
+              <FaRegHeart
+                className="w-5 h-5"
+                onClick={() => selectRecipe(recipeId)}
+              />
             )}
           </button>
         </th>
