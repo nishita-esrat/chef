@@ -1,13 +1,33 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-    .btn-common {
-        @apply border-2 border-yellow-800 md:px-5 px-3 md:py-3 py-2 text-yellow-700 font-semibold md:text-lg text-base rounded-md cursor-pointer
-    }
-    .container{
-        @apply w-full max-w-6xl px-3 md:px-10 lg:px-20 py-4 mx-auto
-    }
+@layer components {
+  .btn-common {
+    @apply border-2 border-yellow-800 md:px-5 px-3 md:py-3 py-2 text-yellow-700 font-semibold md:text-lg text-base rounded-md cursor-pointer;
+  }
+  .container {
+    @apply w-full max-w-6xl px-3 md:px-10 lg:px-20 py-4 mx-auto;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #dededc;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(161, 97, 7, 0.767);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(161, 97, 7, 0.767);
 }
