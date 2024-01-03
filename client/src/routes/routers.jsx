@@ -3,6 +3,8 @@ import App from "../App";
 import Home from "../pages/home/Home";
 import Blog from "../pages/blog/Blog";
 import Chef from "../pages/Chef/Chef";
+import { showFavItem } from "../loaders/loader";
+import FavChef from "../pages/favChef/FavChef";
 
 
   const routers = createBrowserRouter([
@@ -21,7 +23,8 @@ import Chef from "../pages/Chef/Chef";
         },
         {
           path:'my_item',
-          element:'heloooo'
+          element:<FavChef/>,
+          loader:showFavItem
         }
         ,
         {

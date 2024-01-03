@@ -18,6 +18,7 @@ const Chef = () => {
   return (
     <>
       <div className="container ">
+        {/* chef hero part */}
         <div className="hero min-h-fit mt-24 border-y-2 border-y-yellow-700">
           <div className="hero-content flex-col lg:flex-row px-0 py-4">
             <img src={chefPhotoId} className="lg:max-w-sm rounded-lg" />
@@ -47,6 +48,7 @@ const Chef = () => {
             </div>
           </div>
         </div>
+        {/* chef table part */}
         <div className="overflow-x-auto mt-20 mb-16">
           <table className="table w-[1100px]">
             <thead className="text-yellow-700">
