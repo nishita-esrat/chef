@@ -3,6 +3,8 @@ import { useLoaderData, useLocation } from "react-router-dom";
 import ChefTable from "../../component/shared/ChefTable";
 import { deleteChefItemLocalStorage } from "../../utility/utilities";
 import { MdRemoveShoppingCart } from "react-icons/md";
+import { toast } from "react-toastify";
+import { MdDelete } from "react-icons/md";
 
 const FavChef = () => {
   const result = useLoaderData();
@@ -11,6 +13,9 @@ const FavChef = () => {
   //   delete chef favourite item
   const deleteChefItem = async (id) => {
     const result = await deleteChefItemLocalStorage(id);
+    if (result) {
+      toast.success("deleted item", { icon: <MdDelete /> });
+    }
     setChefFav(result);
   };
 
