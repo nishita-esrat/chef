@@ -117,17 +117,17 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        {/* <div className="navbar-end">
-          <button className="btn-common">login</button>
-        </div> */}
-        <div className="dropdown dropdown-end btn btn-ghost ms-auto">
+        <div className="navbar-end">
+          <Link to='/login' className="btn-common text-white">login</Link>
+        </div>
+        {/* <div className="dropdown dropdown-end btn btn-ghost ms-auto">
           <div tabIndex={0} role="button" className="btn-circle avatar">
             <div className="w-10 rounded-full">
-              {/* <img
+              <img
                 alt="Tailwind CSS Navbar component"
                 title="name"
                 src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-              /> */}
+              />
               <FaUserCircle
                 className="text-white Navbar component text-4xl"
                 title="name"
@@ -149,7 +149,7 @@ const Header = () => {
               </Link>
             </li>
           </ul>
-        </div>
+        </div>  */}
       </div>
     </div>
   );
