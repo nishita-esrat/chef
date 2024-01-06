@@ -1,12 +1,51 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { authContext } from "../../provider/AuthProvider";
+import { MdOutlineWifiPassword } from "react-icons/md";
+import { MdAttachEmail } from "react-icons/md";
+import { FaUserAlt } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const Register = () => {
-  const { createUser } = useContext(authContext);
-  
+  const { createUser, nameAndPhoto } = useContext(authContext);
+  const [newUser, setNewUser] = useState({
+    name: "",
+    email: "",
+    password: "",
+    photoUrl: "",
+  });
+  const handelUser = (e) => {
+    setNewUser({ ...newUser, [e.target.name]: e.target.value });
+  };
+  const signUp = (e) => {
+    e.preventDefault();
+    if (newUser.password.length < 6) {
+      toast.error("password must be greater than 6 character", {
+        icon: <MdOutlineWifiPassword />,
+      });
+      return;
+    }
+    createUser(newUser.email, newUser.password)
+      .then((userCredential) => {
+        // Signed up
+        const user = userCredential.user;
+        nameAndPhoto(newUser.name, newUser.photoUrl)
+          .then(() => {
+            // Profile updated!
+            console.log(user);
+            toast.success(" new user created", { icon: <FaUserAlt /> });
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      })
+      .catch((error) => {
+        toast.error("email already exits", { icon: <MdAttachEmail /> });
+        const errorMessage = error.message;
+        console.log(errorMessage);
+      });
+  };
 
- 
   return (
     <div className="bg-base-200">
       <div className="container">
@@ -28,6 +67,8 @@ const Register = () => {
                     placeholder="your name"
                     className="input input-bordered"
                     required
+                    name="name"
+                    onChange={handelUser}
                   />
                 </div>
                 <div className="form-control">
@@ -40,7 +81,9 @@ const Register = () => {
                     type="email"
                     placeholder="email"
                     className="input input-bordered"
+                    name="email"
                     required
+                    onChange={handelUser}
                   />
                 </div>
                 <div className="form-control">
@@ -53,7 +96,9 @@ const Register = () => {
                     type="password"
                     placeholder="password"
                     className="input input-bordered"
+                    name="password"
                     required
+                    onChange={handelUser}
                   />
                 </div>
                 <div className="form-control">
@@ -66,11 +111,13 @@ const Register = () => {
                     type="text"
                     placeholder="photo URL"
                     className="input input-bordered"
+                    name="photoUrl"
                     required
+                    onChange={handelUser}
                   />
                 </div>
                 <div className="form-control mt-6">
-                  <button className="btn-common" >
+                  <button className="btn-common" onClick={signUp}>
                     sign up
                   </button>
                 </div>
