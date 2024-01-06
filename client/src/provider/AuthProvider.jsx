@@ -6,10 +6,10 @@ const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  const signUp = (email,password) => {
-    createUserWithEmailAndPassword(auth, email, password);
+  const createUser = (email, password) => {
+    return createUserWithEmailAndPassword(auth, email, password);
   };
-  const authDetails = { user, loading ,signUp};
+  const authDetails = { user, loading, createUser };
   return (
     <authContext.Provider value={authDetails}>{children}</authContext.Provider>
   );
