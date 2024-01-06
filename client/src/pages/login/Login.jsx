@@ -1,11 +1,50 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
+import { authContext } from "../../provider/AuthProvider";
+import { toast } from "react-toastify";
+import { MdOutlineWifiPassword } from "react-icons/md";
+import { FaUserAlt } from "react-icons/fa";
+import { MdError } from "react-icons/md";
 
 const Login = () => {
-  const { pathname } = useLocation();
-  console.log(pathname);
+  // auth context
+  const { signInUser } = useContext(authContext);
+  // email and password
+  const [exitsUser, setExitsUser] = useState({
+    email: "",
+    password: "",
+  });
+  // get user email and password
+  const handelUser = (e) => {
+    setExitsUser({ ...exitsUser, [e.target.name]: e.target.value });
+  };
+  // sign in function
+  const signIn = (e) => {
+    e.preventDefault();
+    //if password is less than 6
+    if (exitsUser.password.length < 6) {
+      toast.error("password must be greater than 6 character", {
+        icon: <MdOutlineWifiPassword />,
+      });
+      return;
+    }
+    //sign in function from firebase
+    signInUser(exitsUser.email, exitsUser.password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        toast.success("successfully login", { icon: <FaUserAlt /> });
+        console.log(user);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        toast.error("email or password is wrong", { icon: <MdError /> });
+        console.log(errorMessage);
+      });
+  };
   return (
     <div className="bg-base-200">
       <div className="container">
@@ -15,7 +54,7 @@ const Login = () => {
               <h1 className="text-4xl md:text-5xl font-bold">login!</h1>
             </div>
             <div className="card w-full max-w-xl shadow-lg bg-base-100 text-yellow-700">
-              <form className="card-body">
+              <form className="card-body" onSubmit={signIn}>
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text text-yellow-700 text-base">
@@ -26,6 +65,8 @@ const Login = () => {
                     type="email"
                     placeholder="email"
                     className="input input-bordered"
+                    name="email"
+                    onChange={handelUser}
                     required
                   />
                 </div>
@@ -39,6 +80,8 @@ const Login = () => {
                     type="password"
                     placeholder="password"
                     className="input input-bordered"
+                    name="password"
+                    onChange={handelUser}
                     required
                   />
                   <label className="label">

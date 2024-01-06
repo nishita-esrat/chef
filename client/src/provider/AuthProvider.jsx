@@ -3,6 +3,7 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   updateProfile,
+  signInWithEmailAndPassword,
 } from "firebase/auth";
 import app from "../firebase/firebase.init";
 // create auth provider context
@@ -23,8 +24,12 @@ const AuthProvider = ({ children }) => {
       photoURL: photo,
     });
   };
+  //  sign in user
+  const signInUser = (email, password) => {
+    return signInWithEmailAndPassword(auth, email, password);
+  };
   // auth provider context value ,which is object
-  const authDetails = { user, loading, createUser, nameAndPhoto };
+  const authDetails = { user, loading, createUser, nameAndPhoto, signInUser };
   return (
     <authContext.Provider value={authDetails}>{children}</authContext.Provider>
   );

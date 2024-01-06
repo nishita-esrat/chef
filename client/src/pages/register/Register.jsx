@@ -7,28 +7,35 @@ import { FaUserAlt } from "react-icons/fa";
 import { toast } from "react-toastify";
 
 const Register = () => {
+  // auth context
   const { createUser, nameAndPhoto } = useContext(authContext);
+  // email, password ,name,photoUrl
   const [newUser, setNewUser] = useState({
     name: "",
     email: "",
     password: "",
     photoUrl: "",
   });
+  //get user email, password ,name,photoUrl
   const handelUser = (e) => {
     setNewUser({ ...newUser, [e.target.name]: e.target.value });
   };
+  // sign up function
   const signUp = (e) => {
     e.preventDefault();
+    //if password is less than 6
     if (newUser.password.length < 6) {
       toast.error("password must be greater than 6 character", {
         icon: <MdOutlineWifiPassword />,
       });
       return;
     }
+    //sign up function from firebase
     createUser(newUser.email, newUser.password)
       .then((userCredential) => {
         // Signed up
         const user = userCredential.user;
+        //update name and photoUrl function from firebase
         nameAndPhoto(newUser.name, newUser.photoUrl)
           .then(() => {
             // Profile updated!
@@ -55,7 +62,7 @@ const Register = () => {
               <h1 className="text-4xl md:text-5xl font-bold">register!</h1>
             </div>
             <div className="card w-full max-w-xl shadow-lg bg-base-100 text-yellow-700">
-              <form className="card-body">
+              <form className="card-body" onSubmit={signUp}>
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text text-yellow-700 text-base">
@@ -117,9 +124,7 @@ const Register = () => {
                   />
                 </div>
                 <div className="form-control mt-6">
-                  <button className="btn-common" onClick={signUp}>
-                    sign up
-                  </button>
+                  <button className="btn-common">sign up</button>
                 </div>
                 <div className="form-control mt-4 flex-row">
                   <span className="text-black">already have an account ? </span>
