@@ -54,7 +54,7 @@ const Login = () => {
                   <button className="btn-common">sign in</button>
                 </div>
                 <div className="form-control mt-4 flex-row">
-                  <span className="text-black">dont'n have an account ? </span>
+                  <span className="text-black">don't have an account ? </span>
                   <Link to="/register" className="underline">
                     sign up
                   </Link>
