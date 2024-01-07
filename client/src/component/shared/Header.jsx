@@ -1,8 +1,24 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
+import { useContext } from "react";
+import { authContext } from "../../provider/AuthProvider";
 
 const Header = () => {
+  // auth context
+  const { user, loading, logOut } = useContext(authContext);
+  // sign out function
+  const signOut = () => {
+    logOut()
+      .then(() => {
+        // Sign-out successful.
+        console.log("sign out");
+      })
+      .catch((error) => {
+        // An error happened.
+      });
+  };
+
   return (
     <div className="bg-black fixed w-full bg-opacity-80 z-50">
       <div className="container navbar">
@@ -117,39 +133,43 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
-          <Link to='/login' className="btn-common text-white">login</Link>
-        </div>
-        {/* <div className="dropdown dropdown-end btn btn-ghost ms-auto">
-          <div tabIndex={0} role="button" className="btn-circle avatar">
-            <div className="w-10 rounded-full">
-              <img
-                alt="Tailwind CSS Navbar component"
-                title="name"
-                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-              />
-              <FaUserCircle
-                className="text-white Navbar component text-4xl"
-                title="name"
-              />
+        {user ? (
+          <div className="dropdown dropdown-end btn btn-ghost ms-auto">
+            <div tabIndex={0} role="button" className="btn-circle avatar">
+              <div className="w-10 rounded-full">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  title={loading ? "" : user.displayName}
+                  src={loading ? "" : user.photoURL}
+                />
+              </div>
             </div>
+            <ul
+              tabIndex={0}
+              className="mt-4 z-[1] px-4 py-2 shadow-lg dropdown-content bg-white rounded-box w-32 flex flex-col gap-1"
+            >
+              <li>
+                <button
+                  className="text-yellow-700 font-semibold text-base rounded-md cursor-pointer"
+                  onClick={signOut}
+                >
+                  Logout
+                </button>
+              </li>
+              <li>
+                <Link className="text-yellow-700 font-semibold text-base rounded-md cursor-pointer">
+                  user details
+                </Link>
+              </li>
+            </ul>
           </div>
-          <ul
-            tabIndex={0}
-            className="mt-4 z-[1] px-4 py-2 shadow-lg dropdown-content bg-white rounded-box w-32 flex flex-col gap-1"
-          >
-            <li>
-              <button className="text-yellow-700 font-semibold text-base rounded-md cursor-pointer">
-                Logout
-              </button>
-            </li>
-            <li>
-              <Link className="text-yellow-700 font-semibold text-base rounded-md cursor-pointer">
-                user details
-              </Link>
-            </li>
-          </ul>
-        </div>  */}
+        ) : (
+          <div className="navbar-end">
+            <Link to="/login" className="btn-common text-white">
+              login
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

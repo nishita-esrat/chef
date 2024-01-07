@@ -10,16 +10,20 @@ import { MdError } from "react-icons/md";
 
 const Login = () => {
   // auth context
-  const { signInUser } = useContext(authContext);
+  const { signInUser, googleSignIn, githubSignIn } = useContext(authContext);
+
+
   // email and password
   const [exitsUser, setExitsUser] = useState({
     email: "",
     password: "",
   });
+
   // get user email and password
   const handelUser = (e) => {
     setExitsUser({ ...exitsUser, [e.target.name]: e.target.value });
   };
+
   // sign in function
   const signIn = (e) => {
     e.preventDefault();
@@ -45,6 +49,36 @@ const Login = () => {
         console.log(errorMessage);
       });
   };
+
+  // sign in with google
+  const google = () => {
+    googleSignIn()
+      .then((result) => {
+        // The signed-in user info.
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        console.log(error);
+      });
+  };
+
+  // sign in with github
+  const github = () => {
+    githubSignIn()
+      .then((result) => {
+        // The signed-in user info.
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        console.log(error);
+      });
+  };
+
+  
   return (
     <div className="bg-base-200">
       <div className="container">
@@ -106,8 +140,11 @@ const Login = () => {
             </div>
             <div className="form-control font-bold text-center text-xl">or</div>
             <div className="form-control flex-row gap-3 justify-center bg-white py-5 w-[300px] md:w-1/2 shadow-xl mx-auto rounded-lg">
-              <FcGoogle className="w-10 h-10 cursor-pointer" />
-              <FaGithub className="text-black w-10 h-10 cursor-pointer" />
+              <FcGoogle className="w-10 h-10 cursor-pointer" onClick={google} />
+              <FaGithub
+                className="text-black w-10 h-10 cursor-pointer"
+                onClick={github}
+              />
             </div>
           </div>
         </div>
