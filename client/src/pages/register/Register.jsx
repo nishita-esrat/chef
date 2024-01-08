@@ -50,7 +50,7 @@ const Register = () => {
               displayName: newUser.name,
               photoURL: newUser.photoUrl,
             });
-            console.log();
+
             toast.success(" new user created", { icon: <FaUserAlt /> });
             navigation(path);
           })

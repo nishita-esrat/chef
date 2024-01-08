@@ -7,18 +7,16 @@ import { toast } from "react-toastify";
 import { MdOutlineWifiPassword } from "react-icons/md";
 import { FaUserAlt } from "react-icons/fa";
 import { MdError } from "react-icons/md";
+import { MdAttachEmail } from "react-icons/md";
 
 const Login = () => {
-
-
   // auth context
-  const { signInUser, googleSignIn, githubSignIn } = useContext(authContext);
+  const { signInUser, googleSignIn, githubSignIn, resetPassword } =
+    useContext(authContext);
   // get location
-  const location = useLocation()
-  const path = location.state?.from || '/'
-  const navigation = useNavigate()
- 
-
+  const location = useLocation();
+  const path = location.state?.from || "/";
+  const navigation = useNavigate();
 
   // email and password
   const [exitsUser, setExitsUser] = useState({
@@ -47,7 +45,7 @@ const Login = () => {
         // Signed in
         const user = userCredential.user;
         toast.success("successfully login", { icon: <FaUserAlt /> });
-        navigation(path)
+        navigation(path);
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -63,7 +61,8 @@ const Login = () => {
       .then((result) => {
         // The signed-in user info.
         const user = result.user;
-        navigation(path)
+        toast.success("successfully login", { icon: <FaUserAlt /> });
+        navigation(path);
       })
       .catch((error) => {
         // Handle Errors here.
@@ -77,7 +76,8 @@ const Login = () => {
       .then((result) => {
         // The signed-in user info.
         const user = result.user;
-        navigation(path)
+        toast.success("successfully login", { icon: <FaUserAlt /> });
+        navigation(path);
       })
       .catch((error) => {
         // Handle Errors here.
@@ -85,6 +85,25 @@ const Login = () => {
       });
   };
 
+
+  // forgot password
+  const forgotPassword = () => {
+    if (exitsUser.email) {
+      resetPassword(exitsUser.email)
+        .then(() => {
+          // Password reset email sent!
+          toast.success("password reset ,check your gmail", {
+            icon: <MdOutlineWifiPassword />,
+          });
+        })
+        .catch((error) => {
+          const errorMessage = error.message;
+          console.log(errorMessage);
+        });
+    } else {
+      toast.error("enter your email", { icon: <MdAttachEmail /> });
+    }
+  };
 
   return (
     <div className="bg-base-200">
@@ -129,6 +148,9 @@ const Login = () => {
                     <a
                       href="#"
                       className="label-text-alt link link-hover text-base"
+                      onClick={() =>
+                        document.getElementById("my_modal_5").showModal()
+                      }
                     >
                       Forgot password?
                     </a>
@@ -139,7 +161,11 @@ const Login = () => {
                 </div>
                 <div className="form-control mt-4 flex-row">
                   <span className="text-black">don't have an account ? </span>
-                  <Link to="/register" className="underline" state={{from:path}}>
+                  <Link
+                    to="/register"
+                    className="underline"
+                    state={{ from: path }}
+                  >
                     sign up
                   </Link>
                 </div>
@@ -155,6 +181,26 @@ const Login = () => {
             </div>
           </div>
         </div>
+        {/* dialog  ============================ */}
+        <dialog id="my_modal_5" className="modal modal-middle">
+          <div className="modal-box">
+            <p className="py-4">do you want to reset your password ?</p>
+            <div className="modal-action">
+              <form method="dialog">
+                {/* if there is a button in form, it will close the modal */}
+                <button
+                  className="btn btn-warning btn-outline font-bold"
+                  onClick={forgotPassword}
+                >
+                  ok
+                </button>
+                <button className="btn ms-2 btn-error btn-outline font-bold">
+                  Close
+                </button>
+              </form>
+            </div>
+          </div>
+        </dialog>
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import {
   GithubAuthProvider,
   onAuthStateChanged,
   signOut,
+  sendPasswordResetEmail
 } from "firebase/auth";
 import app from "../firebase/firebase.init";
 import { useEffect } from "react";
@@ -58,6 +59,10 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signOut(auth);
   };
+  // reset password
+  const resetPassword = (email)=>{
+    return sendPasswordResetEmail(auth, email)
+  }
 
   // observer user is exits or not
   useEffect(() => {
@@ -83,6 +88,7 @@ const AuthProvider = ({ children }) => {
     githubSignIn,
     logOut,
     setUser,
+    resetPassword
   };
   return (
     <authContext.Provider value={authDetails}>{children}</authContext.Provider>
