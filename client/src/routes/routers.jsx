@@ -7,6 +7,7 @@ import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
 import { showFavItem } from "../loaders/loader";
 import FavChef from "../pages/favChef/FavChef";
+import Private from "../private_route/Private";
 
 const routers = createBrowserRouter([
   {
@@ -24,12 +25,20 @@ const routers = createBrowserRouter([
       },
       {
         path: "my_item",
-        element: <FavChef />,
+        element: (
+          <Private>
+            <FavChef />
+          </Private>
+        ),
         loader: showFavItem,
       },
       {
         path: "single_chef/:chefId",
-        element: <Chef />,
+        element: (
+          <Private>
+            <Chef />
+          </Private>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:800/all_chef/${params.chefId}`),
       },

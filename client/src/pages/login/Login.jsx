@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { authContext } from "../../provider/AuthProvider";
 import { toast } from "react-toastify";
 import { MdOutlineWifiPassword } from "react-icons/md";
@@ -9,8 +9,15 @@ import { FaUserAlt } from "react-icons/fa";
 import { MdError } from "react-icons/md";
 
 const Login = () => {
+
+
   // auth context
   const { signInUser, googleSignIn, githubSignIn } = useContext(authContext);
+  // get location
+  const location = useLocation()
+  const path = location.state?.from || '/'
+  const navigation = useNavigate()
+ 
 
 
   // email and password
@@ -40,7 +47,7 @@ const Login = () => {
         // Signed in
         const user = userCredential.user;
         toast.success("successfully login", { icon: <FaUserAlt /> });
-        console.log(user);
+        navigation(path)
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -56,7 +63,7 @@ const Login = () => {
       .then((result) => {
         // The signed-in user info.
         const user = result.user;
-        console.log(user);
+        navigation(path)
       })
       .catch((error) => {
         // Handle Errors here.
@@ -70,7 +77,7 @@ const Login = () => {
       .then((result) => {
         // The signed-in user info.
         const user = result.user;
-        console.log(user);
+        navigation(path)
       })
       .catch((error) => {
         // Handle Errors here.
@@ -78,7 +85,7 @@ const Login = () => {
       });
   };
 
-  
+
   return (
     <div className="bg-base-200">
       <div className="container">
@@ -132,7 +139,7 @@ const Login = () => {
                 </div>
                 <div className="form-control mt-4 flex-row">
                   <span className="text-black">don't have an account ? </span>
-                  <Link to="/register" className="underline">
+                  <Link to="/register" className="underline" state={{from:path}}>
                     sign up
                   </Link>
                 </div>

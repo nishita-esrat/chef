@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { authContext } from "../../provider/AuthProvider";
 import { MdOutlineWifiPassword } from "react-icons/md";
 import { MdAttachEmail } from "react-icons/md";
@@ -8,7 +8,12 @@ import { toast } from "react-toastify";
 
 const Register = () => {
   // auth context
-  const { createUser, nameAndPhoto } = useContext(authContext);
+  const { createUser, nameAndPhoto, setUser } = useContext(authContext);
+  // get location
+  const location = useLocation();
+  const path = location.state?.from || "/";
+  const navigation = useNavigate();
+
   // email, password ,name,photoUrl
   const [newUser, setNewUser] = useState({
     name: "",
@@ -16,6 +21,7 @@ const Register = () => {
     password: "",
     photoUrl: "",
   });
+
   //get user email, password ,name,photoUrl
   const handelUser = (e) => {
     setNewUser({ ...newUser, [e.target.name]: e.target.value });
@@ -39,8 +45,14 @@ const Register = () => {
         nameAndPhoto(newUser.name, newUser.photoUrl)
           .then(() => {
             // Profile updated!
-            console.log(user);
+            setUser({
+              ...user,
+              displayName: newUser.name,
+              photoURL: newUser.photoUrl,
+            });
+            console.log();
             toast.success(" new user created", { icon: <FaUserAlt /> });
+            navigation(path);
           })
           .catch((error) => {
             console.log(error);
