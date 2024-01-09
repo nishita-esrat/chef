@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { authContext } from "../provider/AuthProvider";
+import Loading from "../pages/loader/Loading";
 
 const Private = ({ children }) => {
   // get location
@@ -10,7 +11,7 @@ const Private = ({ children }) => {
 
   // if loading exits
   if (loading) {
-    return <span className="loading loading-ball loading-lg"></span>;
+    return <Loading />;
   }
   // if user exits
   if (user) {

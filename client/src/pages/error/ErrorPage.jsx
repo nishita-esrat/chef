@@ -9,11 +9,11 @@ const ErrorPage = () => {
       <BiSolidError className="w-28 h-28 text-black" />
       <p>{error.statusText}</p>
       <p>
-        <span className="text-gray-500 font-mono">message :</span>
+        <span className="text-gray-500 font-mono">message : </span>
         {error.data}
       </p>
       <p>
-        <span className="text-gray-500 font-bold">status :</span>
+        <span className="text-gray-500 font-bold">status : </span>
         {error.status}
       </p>
     </div>
