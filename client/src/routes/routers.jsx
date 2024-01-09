@@ -9,11 +9,13 @@ import { showFavItem } from "../loaders/loader";
 import FavChef from "../pages/favChef/FavChef";
 import Private from "../private_route/Private";
 import Profile from "../component/shared/profile/Profile";
+import ErrorPage from "../pages/error/ErrorPage";
 
 const routers = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",

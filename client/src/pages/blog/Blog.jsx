@@ -9,7 +9,7 @@ const Blog = () => {
     <div className="container">
       <div className="mt-24 min-h-screen flex flex-col gap-8 md:gap-14 ">
         <div className="flex flex-col gap-5" ref={targetRef}>
-          <h1 className="text-3xl font-semibold mb-10">Blog</h1>
+          <h1 className="text-3xl font-semibold mb-10 text-yellow-700">Blog</h1>
           <div>
             <p>
               <span className="font-bold">question :</span>
