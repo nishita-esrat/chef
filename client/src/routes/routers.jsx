@@ -8,6 +8,7 @@ import Register from "../pages/register/Register";
 import { showFavItem } from "../loaders/loader";
 import FavChef from "../pages/favChef/FavChef";
 import Private from "../private_route/Private";
+import Profile from "../component/shared/profile/Profile";
 
 const routers = createBrowserRouter([
   {
@@ -50,6 +51,15 @@ const routers = createBrowserRouter([
       {
         path: "register",
         element: <Register />,
+      },
+      ,
+      {
+        path: "profile",
+        element: (
+          <Private>
+            <Profile />
+          </Private>
+        ),
       },
     ],
   },

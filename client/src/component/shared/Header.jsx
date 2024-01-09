@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { FaUserCircle } from "react-icons/fa";
 import { useContext } from "react";
 import { authContext } from "../../provider/AuthProvider";
 
@@ -157,7 +156,10 @@ const Header = () => {
                 </button>
               </li>
               <li>
-                <Link className="text-yellow-700 font-semibold text-base rounded-md cursor-pointer">
+                <Link
+                  to="/profile"
+                  className="text-yellow-700 font-semibold text-base rounded-md cursor-pointer"
+                >
                   user details
                 </Link>
               </li>

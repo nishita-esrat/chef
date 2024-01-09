@@ -85,7 +85,6 @@ const Login = () => {
       });
   };
 
-
   // forgot password
   const forgotPassword = () => {
     if (exitsUser.email) {
