@@ -20,7 +20,7 @@ const routers = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("http://localhost:800/all_chef"),
+        loader: () => fetch("https://chef-server-murex.vercel.app/all_chef"),
       },
       {
         path: "blog",
@@ -43,7 +43,9 @@ const routers = createBrowserRouter([
           </Private>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:800/all_chef/${params.chefId}`),
+          fetch(
+            `https://chef-server-murex.vercel.app/all_chef/${params.chefId}`
+          ),
       },
       {
         path: "login",

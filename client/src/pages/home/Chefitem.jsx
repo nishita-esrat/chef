@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 const Chefitem = ({ item }) => {
   const {
     chefId,
@@ -13,7 +14,7 @@ const Chefitem = ({ item }) => {
   return (
     <div className="card bg-base-100 shadow-xl">
       <figure className="h-44 object-cover object-top">
-        <img src={chefPhotoId} alt="chef photo" />
+          <img src={chefPhotoId} alt="chef photo" />
       </figure>
       <div className="card-body text-yellow-900 ">
         <h2 className="card-title text-lg">
@@ -35,7 +36,12 @@ const Chefitem = ({ item }) => {
           <div>
             <span className="text-base text-gray-600">likes : </span> {likes}
           </div>
-          <Link to={`/single_chef/${chefId}`} className="btn-common block mt-5 text-center">view recipes</Link>
+          <Link
+            to={`/single_chef/${chefId}`}
+            className="btn-common block mt-5 text-center"
+          >
+            view recipes
+          </Link>
         </div>
       </div>
     </div>

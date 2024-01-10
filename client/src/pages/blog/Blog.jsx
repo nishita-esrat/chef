@@ -1,14 +1,12 @@
 import React from "react";
-import { useRef } from "react";
-import generatePDF from "react-to-pdf";
+
 
 const Blog = () => {
-  const targetRef = useRef();
 
   return (
     <div className="container">
       <div className="mt-24 min-h-screen flex flex-col gap-8 md:gap-14 ">
-        <div className="flex flex-col gap-5" ref={targetRef}>
+        <div className="flex flex-col gap-5">
           <h1 className="text-3xl font-semibold mb-10 text-yellow-700">Blog</h1>
           <div>
             <p>
@@ -65,12 +63,6 @@ const Blog = () => {
             </p>
           </div>
         </div>
-        <button
-          className="btn-common w-fit"
-          onClick={() => generatePDF(targetRef, { filename: "blog.pdf" })}
-        >
-          download as PDF
-        </button>
       </div>
     </div>
   );
